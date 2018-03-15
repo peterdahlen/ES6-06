@@ -4,25 +4,22 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
 	<script type="text/babel">
 		
-		var attendance = {
+		var attendence = {
 			_list: [],
 			set addName(name) {
 				this._list.push(name);
 			},
-			get list() {
+			get list () {
 				return this._list.join(', ');
 			}
 		};
+		attendence.addName = 'Johanna';
+		console.log(attendence.list);
+		console.log(attendence._list);
 
-		attendance.addName = 'Joanne';
-		console.log("List getter:", attendance.list);
-		console.log("Underscore list (prop)", attendance._list);
-
-		attendance.addName = 'Anna';
-		attendance.addName = 'Charlie';
-		console.log(attendance.list);
-
-		console.log("============= Classes ============== ")
+		attendence.addName = 'Anna';
+		attendence.addName = 'Christoffer';
+		console.log(attendence.list);
 
 		class Hike {
 			constructor(distance, pace) {
@@ -39,7 +36,6 @@
 
 		const mtTallac = new Hike(10, 2);
 		console.log(mtTallac.lengthInHours);
-
 
 	</script>
 	<title>Getters and Setters</title>
